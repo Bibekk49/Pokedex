@@ -1,135 +1,46 @@
 .pokemon-detail {
   max-width: 600px;
   margin: 2rem auto;
-  padding: 1.5rem;
-  border-radius: 15px;
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
-  font-family: 'Arial', sans-serif;
-  color: #ffffff;
-  background: linear-gradient(145deg, #1e1e40, #2a2a72);
-  border: 2px solid #ffcc00;
+  padding: 1rem;
+  background-color: #1e2a38;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
   text-align: center;
 }
 
-.pokemon-name {
-  text-transform: uppercase;
-  font-size: 2.5rem;
-  font-weight: bold;
-  margin-bottom: 1rem;
-  color: #ffcc00;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+.pokemon-detail img {
+  height: 120px;
+  margin: 0.5rem;
+  image-rendering: auto;
 }
 
-.pokemon-images {
-  display: flex;
-  justify-content: center;
-  gap: 0; /* No spacing between the images */
-  margin-bottom: 1.5rem;
-}
-
-.pokemon-sprite {
-  width: 200px; /* Make the images larger */
-  height: 200px;
-  object-fit: contain;
-  background: none; /* Remove background */
-  border: none; /* Remove border */
-}
-
-.pokemon-info {
-  font-size: 1rem;
-  line-height: 1.6;
-  text-align: left;
-}
-
-.pokemon-info p {
-  margin: 0.5rem 0;
-}
-
-.pokemon-info strong {
-  color: #ffcc00;
-}
-
-.pokemon-stats {
+.pokemon-detail ul {
   list-style: none;
   padding: 0;
-  margin: 1rem 0 0;
 }
 
-.pokemon-stats li {
-  margin: 1rem 0;
+.pokemon-detail li {
+  margin: 0.25rem 0;
+  color: #f0f0f0;
 }
 
-.stat-label {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 4px;
-  font-weight: bold;
-  color: #eee;
-}
-
-.stat-bar {
-  width: 100%;
-  height: 20px;
-  background-color: #2c2c2c;
+.about-container {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 1rem 2rem;
+  background: #1a2b3d;
   border-radius: 10px;
-  overflow: hidden;
-  position: relative;
-  margin-bottom: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
 }
 
-.stat-bar-fill {
-  height: 100%;
-  transition: width 0.5s ease-in-out;
-}
-
-.stat-bar-fill.low {
-  background-color: #f44336;
-}
-
-.stat-bar-fill.medium {
-  background-color: #ff9800;
-}
-
-.stat-bar-fill.high {
-  background-color: #4caf50;
-}
-
-.stat-number {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font-size: 0.9rem;
-  font-weight: bold;
-  color: #ffffff;
-  z-index: 1;
-}
-
-.loading {
+.about-container h2 {
   text-align: center;
-  font-size: 1.5rem;
-  color: #ffffff;
-  margin-top: 2rem;
+  color: #00bcd4;
+  margin-bottom: 1rem;
 }
 
-.back-button {
-  display: inline-block;
-  padding: 5px 10px;
-  font-size: 1rem; /* Slightly larger font size */
-  background-color: #00bcd4;/* Match the pagination button color */
-  color: white;
-  border: none;
-  border-radius: 5px;
-  text-align: center;
-  cursor: pointer;
-  margin-top: 20px; /* Add space between button and other elements */
-  margin-left: auto;
-  margin-right: auto;
-  display: block; /* Center the button */
-  transition: background-color 0.3s ease, transform 0.2s ease;
-}
-
-.back-button:hover {
-  background-color: #00bcd4; /* Darker shade on hover */
-  transform: scale(1.05); /* Slight zoom effect on hover */
+.about-container p {
+  line-height: 1.6;
+  font-size: 1.1rem;
+  color: #f0f0f0;
 }
