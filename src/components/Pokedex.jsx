@@ -34,10 +34,10 @@ export default function Pokedex() {
             <h2 className="pokemon-name">{pokemon.name}</h2>
             {pokemon.sprites?.front_default && (
               <img
-                src={pokemon.sprites.front_default}
-                alt={`${pokemon.name} sprite`}
-                className="pokemon-image"
-              />
+              src={pokemon.sprites.other['official-artwork'].front_default}
+              alt={`${pokemon.name} artwork`}
+              className="pokemon-image"
+            />
             )}
           </Link>
         ))}

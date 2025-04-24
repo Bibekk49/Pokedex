@@ -26,6 +26,13 @@
   .pokemon-card * {
     text-decoration: none !important;
   }
+
+  .pokemon-image {
+    image-rendering: pixelated;
+    width: 100px;  /* Or a size that fits your design */
+    height: 100px;
+  }
+  
   
   /* Type color themes */
   .grass { background-color: #78c850; }
