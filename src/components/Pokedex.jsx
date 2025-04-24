@@ -1,11 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import Pagination from './Pagination';
+import '../assets/styles.css'; // Make sure this path is correct
 
 export default function Pokedex() {
   const [pokemonList, setPokemonList] = useState([]);
   const [page, setPage] = useState(1);
-  const limit = 20;
+  const limit = 12;
 
   useEffect(() => {
     const offset = (page - 1) * limit;
@@ -20,21 +21,23 @@ export default function Pokedex() {
   }, [page]);
 
   return (
-    <div>
-      <h1>Pokédex</h1>
-      <ul>
+    <div className="pokedex-container">
+      <h1 className="main-heading">Pokédex</h1>
+      <div className="pokemon-grid">
         {pokemonList.map((pokemon, index) => (
-          <li key={index}>
-            <Link to={`/pokemon/${pokemon.name}`}>
+          <Link to={`/pokemon/${pokemon.name}`} key={index} className={`pokemon-card ${pokemon.types[0].type.name}`}>
+            <span className="pokemon-id">#{pokemon.id}</span>
+            <h2 className="pokemon-name">{pokemon.name}</h2>
+            {pokemon.sprites?.front_default && (
               <img
                 src={pokemon.sprites.front_default}
                 alt={`${pokemon.name} sprite`}
+                className="pokemon-image"
               />
-              <span>{pokemon.name}</span>
-            </Link>
-          </li>
+            )}
+          </Link>
         ))}
-      </ul>
+      </div>
       <Pagination page={page} setPage={setPage} />
     </div>
   );

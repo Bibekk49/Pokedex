@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
+import './../assets/styles.css'; // Ensure global styles are linked
 
 export default function PokemonDetail() {
   const { id } = useParams();
@@ -12,26 +13,30 @@ export default function PokemonDetail() {
   }, [id]);
 
   if (!pokemon) {
-    return <div>Loading...</div>;
+    return <div className="loading">Loading...</div>;
   }
 
   return (
-    <div>
-      <h1>{pokemon.name}</h1>
-      <img src={pokemon.sprites.front_default} alt={`${pokemon.name} front`} />
-      <img src={pokemon.sprites.back_default} alt={`${pokemon.name} back`} />
-      <p>Height: {pokemon.height}</p>
-      <p>Weight: {pokemon.weight}</p>
-      <p>Abilities: {pokemon.abilities.map((a) => a.ability.name).join(', ')}</p>
-      <p>Types: {pokemon.types.map((t) => t.type.name).join(', ')}</p>
-      <p>Stats:</p>
-      <ul>
-        {pokemon.stats.map((stat, index) => (
-          <li key={index}>
-            {stat.stat.name}: {stat.base_stat}
-          </li>
-        ))}
-      </ul>
+    <div className="pokemon-detail">
+      <h1 className="pokemon-name">{pokemon.name}</h1>
+      <div className="pokemon-images">
+        <img src={pokemon.sprites.front_default} alt={`${pokemon.name} front`} />
+        <img src={pokemon.sprites.back_default} alt={`${pokemon.name} back`} />
+      </div>
+      <div className="pokemon-info">
+        <p><strong>Height:</strong> {pokemon.height}</p>
+        <p><strong>Weight:</strong> {pokemon.weight}</p>
+        <p><strong>Abilities:</strong> {pokemon.abilities.map((a) => a.ability.name).join(', ')}</p>
+        <p><strong>Types:</strong> {pokemon.types.map((t) => t.type.name).join(', ')}</p>
+        <p><strong>Stats:</strong></p>
+        <ul className="pokemon-stats">
+          {pokemon.stats.map((stat, index) => (
+            <li key={index}>
+              {stat.stat.name}: {stat.base_stat}
+            </li>
+          ))}
+        </ul>
+      </div>
     </div>
   );
 }

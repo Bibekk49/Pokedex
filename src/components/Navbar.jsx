@@ -1,29 +1,16 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import './../assets/styles.css'; // Ensure global styles are linked
 
 export default function Navbar() {
   return (
-    <nav style={styles.navbar}>
-      <Link to="/" style={styles.link}>
+    <nav className="navbar">
+      <Link to="/" className="nav-link">
         Pokédex
       </Link>
-      <Link to="/about" style={styles.link}>
+      <Link to="/about" className="nav-link">
         About
       </Link>
     </nav>
   );
 }
-
-const styles = {
-  navbar: {
-    display: 'flex',
-    justifyContent: 'space-around',
-    padding: '1rem',
-    backgroundColor: '#282c34',
-  },
-  link: {
-    color: 'white',
-    textDecoration: 'none',
-    fontSize: '1.2rem',
-  },
-};

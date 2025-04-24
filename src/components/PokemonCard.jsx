@@ -5,7 +5,7 @@ import "./PokemonCard.css";
 const PokemonCard = ({ name, image, type, abilities }) => {
   return (
     <div className="pokemon-card">
-      <img src={image} alt={`${name}`} className="pokemon-image" />
+      <img src={image} alt={name} className="pokemon-image" />
       <h2 className="pokemon-name">{name}</h2>
       <p className="pokemon-type">
         <strong>Type:</strong> {type}
@@ -14,7 +14,9 @@ const PokemonCard = ({ name, image, type, abilities }) => {
         <strong>Abilities:</strong>
         <ul>
           {abilities.map((ability, index) => (
-            <li key={index}>{ability}</li>
+            <li key={index} className="pokemon-ability">
+              {ability}
+            </li>
           ))}
         </ul>
       </div>
