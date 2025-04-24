@@ -64,8 +64,8 @@
   .dragon { background-color: #7038f8; }
 
 /* Fire type */
-.pokemon-card.fire:nth-child(odd) { background-color: #f08030; }     
-.pokemon-card.fire:nth-child(even) { background-color: #ff944d; }   
+.pokemon-card.fire:nth-child(odd) { background-color: #f08030; }     /* original */
+.pokemon-card.fire:nth-child(even) { background-color: #ff944d; }    /* lighter */
 
 /* Water type */
 .pokemon-card.water:nth-child(odd) { background-color: #6890f0; }

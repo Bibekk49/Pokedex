@@ -56,7 +56,7 @@
   }
   
   .github-link:hover {
-    color: #0366d6; 
+    color: #0366d6; /* GitHub blue */
   }
   
   .github-logo {

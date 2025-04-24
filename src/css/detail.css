@@ -1,11 +1,6 @@
 .pokemon-detail {
-  position: fixed; 
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
   max-width: 600px;
-  width: 90%;
-  margin: 0;
+  margin: 2rem auto;
   padding: 1.5rem;
   border-radius: 15px;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
@@ -14,12 +9,6 @@
   background: linear-gradient(145deg, #1e1e40, #2a2a72);
   border: 2px solid #ffcc00;
   text-align: center;
-  z-index: 1000;
-  overflow: hidden;
-}
-
-body {
-  overflow: hidden;
 }
 
 .pokemon-name {
@@ -34,16 +23,16 @@ body {
 .pokemon-images {
   display: flex;
   justify-content: center;
-  gap: 0;
+  gap: 0; /* No spacing between the images */
   margin-bottom: 1.5rem;
 }
 
 .pokemon-sprite {
-  width: 200px;
+  width: 200px; /* Make the images larger */
   height: 200px;
   object-fit: contain;
-  background: none; 
-  border: none; 
+  background: none; /* Remove background */
+  border: none; /* Remove border */
 }
 
 .pokemon-info {
@@ -113,21 +102,21 @@ body {
 .back-button {
   display: inline-block;
   padding: 5px 10px;
-  font-size: 1rem; 
-  background-color: #00bcd4;
+  font-size: 1rem; /* Slightly larger font size */
+  background-color: #00bcd4;/* Match the pagination button color */
   color: white;
   border: none;
   border-radius: 5px;
   text-align: center;
   cursor: pointer;
-  margin-top: 20px; 
+  margin-top: 20px; /* Add space between button and other elements */
   margin-left: auto;
   margin-right: auto;
-  display: block;
+  display: block; /* Center the button */
   transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 .back-button:hover {
-  background-color: #00bcd4;
-  transform: scale(1.05);
+  background-color: #00bcd4; /* Darker shade on hover */
+  transform: scale(1.05); /* Slight zoom effect on hover */
 }

@@ -28,6 +28,7 @@ export default function About() {
 
       <p className="footer-note">Created by Bibek and Razz.</p>
 
+      {/* Footer with GitHub logo and link */}
       <footer className="footer">
         <a 
           href="https://github.com/Bibekk49/Pokedex" 
