@@ -87,9 +87,14 @@ export default function PokemonDetail() {
         </ul>
       </div>
       <button
-        onClick={() =>
-          navigate('/', { state: { page: location.state?.page || 1 } })
-        }
+        onClick={() => {
+          // Save the current page state in sessionStorage before navigating back
+          const savedPage = location.state?.page || 1;
+          sessionStorage.setItem('currentPage', savedPage);
+
+          // Navigate back to the Pokedex page with the preserved state
+          navigate('/', { state: { page: savedPage } });
+        }}
         className="back-button"
       >
         Back to Pokedex
