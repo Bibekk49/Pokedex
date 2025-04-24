@@ -1,7 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import Pagination from './Pagination';
-import '../assets/styles.css'; // Make sure this path is correct
+import '../css/base.css';
+import '../css/grid.css';
+import '../css/cards.css';
+import '../css/pagination.css';
+
 
 export default function Pokedex() {
   const [pokemonList, setPokemonList] = useState([]);

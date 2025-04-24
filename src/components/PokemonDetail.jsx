@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
-import './../assets/styles.css'; // Ensure global styles are linked
-import './../assets/details.css';
+import '../css/detail.css';
+
 
 export default function PokemonDetail() {
   const { id } = useParams();

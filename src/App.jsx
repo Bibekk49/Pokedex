@@ -1,5 +1,7 @@
 import React from 'react';
-import './assets/styles.css';
+import './css/base.css';
+import './css/navbar.css';
+
 import { createHashRouter, RouterProvider, Outlet } from 'react-router-dom';
 import Pokedex from './components/Pokedex';
 import PokemonDetail from './components/PokemonDetail';

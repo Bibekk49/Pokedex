@@ -1,5 +1,6 @@
 import React from 'react';
-import './../assets/styles.css'; // ✅ Make sure this is imported if not already globally
+import '../css/base.css';
+
 
 export default function About() {
   return (

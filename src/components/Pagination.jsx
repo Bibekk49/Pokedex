@@ -1,3 +1,4 @@
+import '../css/pagination.css';
 export default function Pagination({ page, setPage }) {
   return (
     <div className="pagination-container">
