@@ -35,8 +35,7 @@ export default function Pokedex() {
             key={index}
             className={`pokemon-card ${pokemon.types[0].type.name}`}
           >
-            <span className="pokemon-id">#{(page - 1) * limit + index + 1}</span>
-
+            <span className="pokemon-id">#{pokemon.id}</span>
             <h2 className="pokemon-name">{pokemon.name}</h2>
             {pokemon.sprites?.other?.['official-artwork']?.front_default && (
               <img
