@@ -1,5 +1,6 @@
 .pokemon-card {
     text-decoration: none;
+    position: relative;
     color: #333;
     background-color: #f8f8f8;
     border-radius: 12px;
@@ -17,6 +18,18 @@
     text-transform: capitalize;
     text-align: center;
   }
+
+  .pokemon-id {
+    position: absolute;
+    top: 8px;
+    left: 12px;
+    font-size: 0.9rem;
+    font-weight: bold;
+    color: #ffffff;
+    opacity: 0.8;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+  }
+  
   
   .pokemon-card:hover {
     transform: scale(1.05);

@@ -1,10 +1,11 @@
 import React from "react";
 import PropTypes from "prop-types";
-import './../css/cards.css';
+import "./../css/cards.css";
 
-const PokemonCard = ({ name, image, type, abilities }) => {
+const PokemonCard = ({ name, image, type, abilities, number }) => {
   return (
     <div className="pokemon-card">
+      <span className="pokemon-id">.{number.toString().padStart(3, '0')}</span>
       <img src={image} alt={name} className="pokemon-image" />
       <p className="pokemon-name">{name}</p>
       <p className="pokemon-type">
@@ -29,6 +30,7 @@ PokemonCard.propTypes = {
   image: PropTypes.string.isRequired,
   type: PropTypes.string.isRequired,
   abilities: PropTypes.arrayOf(PropTypes.string).isRequired,
+  number: PropTypes.number.isRequired,
 };
 
 export default PokemonCard;

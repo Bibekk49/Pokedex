@@ -6,7 +6,6 @@ import '../css/grid.css';
 import '../css/cards.css';
 import '../css/pagination.css';
 
-
 export default function Pokedex() {
   const [pokemonList, setPokemonList] = useState([]);
   const [page, setPage] = useState(1);
@@ -29,15 +28,20 @@ export default function Pokedex() {
       <h1 className="main-heading">Pokédex</h1>
       <div className="pokemon-grid">
         {pokemonList.map((pokemon, index) => (
-          <Link to={`/pokemon/${pokemon.name}`} key={index} className={`pokemon-card ${pokemon.types[0].type.name}`}>
-            <span className="pokemon-id">#{pokemon.id}</span>
+          <Link
+            to={`/pokemon/${pokemon.name}`}
+            key={index}
+            className={`pokemon-card ${pokemon.types[0].type.name}`}
+          >
+            <span className="pokemon-id">.{pokemon.id}</span>
+
             <h2 className="pokemon-name">{pokemon.name}</h2>
-            {pokemon.sprites?.front_default && (
+            {pokemon.sprites?.other?.['official-artwork']?.front_default && (
               <img
-              src={pokemon.sprites.other['official-artwork'].front_default}
-              alt={`${pokemon.name} artwork`}
-              className="pokemon-image"
-            />
+                src={pokemon.sprites.other['official-artwork'].front_default}
+                alt={`${pokemon.name} artwork`}
+                className="pokemon-image"
+              />
             )}
           </Link>
         ))}
