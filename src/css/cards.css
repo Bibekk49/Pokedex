@@ -9,6 +9,15 @@
     max-width: 250px;
     box-shadow: 0 4px 12px rgba(0,0,0,0.1);
   }
+  .pokemon-name {
+    font-size: 1rem;         /* Smaller, cleaner text */
+    font-weight: 500;          /* Slightly bold */
+    margin: 0.5rem 0;
+    color: #ffffff;            /* White or matching background contrast */
+    text-transform: capitalize;
+    text-align: center;
+  }
+  
   
   .pokemon-card:hover {
     transform: scale(1.05);
