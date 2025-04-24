@@ -8,7 +8,6 @@ export default function Navbar() {
   return (
     <nav className="navbar">
       <div className="nav-content">
-        {/* Always navigate to the first page */}
         <Link
           to={{
             pathname: '/',

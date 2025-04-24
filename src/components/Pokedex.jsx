@@ -14,22 +14,19 @@ export default function Pokedex() {
 
   const location = useLocation();
 
-  // Retrieve the previous page state from sessionStorage or React Router state
   useEffect(() => {
     const savedPage = sessionStorage.getItem("currentPage");
     const initialPage = location.state?.page || (savedPage ? parseInt(savedPage, 10) : 1);
     setPage(initialPage);
   }, [location]);
 
-  // Save the current page to sessionStorage whenever it changes
   useEffect(() => {
     sessionStorage.setItem("currentPage", page);
   }, [page]);
 
-  // Fetch paginated Pokémon list
   useEffect(() => {
     const offset = (page - 1) * limit;
-    setError(null); // Reset error state
+    setError(null); 
     fetch(`https://pokeapi.co/api/v2/pokemon?limit=${limit}&offset=${offset}`)
       .then((response) => {
         if (!response.ok) {
@@ -46,7 +43,7 @@ export default function Pokedex() {
               }
               return res.json();
             })
-            .catch(() => null) // Handle individual Pokémon fetch errors
+            .catch(() => null) 
         );
         Promise.all(promises).then((details) => setPokemonList(details.filter(Boolean)));
       })
@@ -66,7 +63,7 @@ export default function Pokedex() {
             to={`/pokemon/${pokemon.name}`}
             key={index}
             className={`pokemon-card ${pokemon.types[0]?.type?.name || "unknown"}`}
-            state={{ page }} // Pass the current page state
+            state={{ page }} 
           >
             <span className="pokemon-id">#{(page - 1) * limit + index + 1}</span>
             <h2 className="pokemon-name">{pokemon.name}</h2>
