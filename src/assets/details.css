@@ -1,0 +1,101 @@
+.pokemon-detail {
+    max-width: 400px;
+    margin: 2rem auto;
+    padding: 1.5rem;
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    font-family: 'Arial', sans-serif;
+    color: #ffffff;
+    background: linear-gradient(145deg, #1e1e40, #2a2a72); /* Dark gradient background */
+    border: 2px solid #ffcc00; /* Golden border for card effect */
+    text-align: center;
+  }
+  
+  .pokemon-name {
+    text-transform: uppercase;
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    color: #ffcc00; /* Golden color for the name */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  }
+  
+  .pokemon-images {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .pokemon-images img {
+    width: 120px;
+    height: 120px;
+    object-fit: contain;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    background-color: #ffffff;
+  }
+  
+  .pokemon-info {
+    font-size: 1rem;
+    line-height: 1.6;
+    text-align: left;
+  }
+  
+  .pokemon-info p {
+    margin: 0.5rem 0;
+  }
+  
+  .pokemon-info strong {
+    color: #ffcc00; /* Highlighted text color */
+  }
+  
+  .pokemon-stats {
+    list-style: none;
+    padding: 0;
+    margin: 1rem 0 0;
+  }
+  
+  .pokemon-stats li {
+    margin: 0.5rem 0;
+    padding: 0.5rem 0;
+  }
+  
+  .stat-label {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.3rem;
+    font-weight: bold;
+    color: #ffffff;
+  }
+  
+  .stat-bar {
+    position: relative;
+    height: 12px;
+    background-color: #333;
+    border-radius: 5px;
+    overflow: hidden;
+    border: 1px solid #555;
+  }
+  
+  .stat-bar-fill {
+    height: 100%;
+    background-color: #4caf50; /* Default green color */
+    width: 0; /* Start with 0 width for animation */
+    transition: width 0.5s ease-in-out;
+  }
+  
+  .loading {
+    text-align: center;
+    font-size: 1.5rem;
+    color: #ffffff;
+    margin-top: 2rem;
+  }
+  
+  .pokemon-card-footer {
+    margin-top: 1.5rem;
+    font-size: 0.9rem;
+    color: #cccccc;
+    text-align: center;
+    font-style: italic;
+  }

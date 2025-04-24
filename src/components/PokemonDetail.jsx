@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import './../assets/styles.css'; // Ensure global styles are linked
+import './../assets/details.css';
 
 export default function PokemonDetail() {
   const { id } = useParams();
@@ -32,7 +33,16 @@ export default function PokemonDetail() {
         <ul className="pokemon-stats">
           {pokemon.stats.map((stat, index) => (
             <li key={index}>
-              {stat.stat.name}: {stat.base_stat}
+              <div className="stat-label">
+                <span>{stat.stat.name}</span>
+                <span>{stat.base_stat}</span>
+              </div>
+              <div className="stat-bar">
+                <div
+                  className="stat-bar-fill"
+                  style={{ width: `${(stat.base_stat / 255) * 100}%` }} // Assuming 255 is the max stat value
+                ></div>
+              </div>
             </li>
           ))}
         </ul>
