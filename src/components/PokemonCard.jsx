@@ -1,12 +1,12 @@
 import React from "react";
 import PropTypes from "prop-types";
-import "./PokemonCard.css";
+import './../css/cards.css';
 
 const PokemonCard = ({ name, image, type, abilities }) => {
   return (
     <div className="pokemon-card">
       <img src={image} alt={name} className="pokemon-image" />
-      <h2 className="pokemon-name">{name}</h2>
+      <p className="pokemon-name">{name}</p>
       <p className="pokemon-type">
         <strong>Type:</strong> {type}
       </p>
