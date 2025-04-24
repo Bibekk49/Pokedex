@@ -1,23 +1,19 @@
 body {
-  margin: 0;
-  font-family: 'Segoe UI', sans-serif;
-  background-color: #0e1a2b;
-  color: #fff;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-}
-
-h1 {
-  text-align: center;
-  font-size: 2.5rem;
-  margin: 1.5rem 0;
-}
-
-.pokedex-container {
-  flex-grow: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  min-height: calc(100vh - 150px);
-}
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #0e1a2b;
+    color: #fff;
+  }
+  
+  h1 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin: 1.5rem 0;
+  }
+  
+  .pokedex-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+    text-align: center;
+  }
