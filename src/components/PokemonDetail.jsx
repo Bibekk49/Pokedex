@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from 'react';
-import { useParams, useLocation, useNavigate } from 'react-router-dom';
-import '../css/detail.css';
+import React, { useState, useEffect } from "react";
+import { useParams, useLocation, useNavigate } from "react-router-dom";
+import "../css/detail.css";
 
 export default function PokemonDetail() {
   const { id } = useParams();
@@ -36,7 +36,7 @@ export default function PokemonDetail() {
       <h1 className="pokemon-name">{pokemon.name}</h1>
       <div className="pokemon-images">
         <img
-          src={pokemon.sprites.other['official-artwork'].front_default}
+          src={pokemon.sprites.other["official-artwork"].front_default}
           alt={`${pokemon.name} front`}
           className="pokemon-sprite"
         />
@@ -77,9 +77,14 @@ export default function PokemonDetail() {
                 </div>
                 <div className="stat-bar">
                   <div
-                    className={`stat-bar-fill ${colorClass}`}
-                    style={{ width: `${percentage}%` }}
-                  ></div>
+                    className="stat-bar-fill"
+                    style={{
+                      width: `${percentage}%`,
+                      background: `linear-gradient(to right, red, orange, yellow, limegreen)`,
+                      backgroundSize: `${100 / (percentage / 100)}% 100%`,
+                      backgroundRepeat: "no-repeat",
+                    }}
+                  />
                 </div>
               </li>
             );
@@ -90,10 +95,10 @@ export default function PokemonDetail() {
         onClick={() => {
           // Save the current page state in sessionStorage before navigating back
           const savedPage = location.state?.page || 1;
-          sessionStorage.setItem('currentPage', savedPage);
+          sessionStorage.setItem("currentPage", savedPage);
 
           // Navigate back to the Pokedex page with the preserved state
-          navigate('/', { state: { page: savedPage } });
+          navigate("/", { state: { page: savedPage } });
         }}
         className="back-button"
       >
