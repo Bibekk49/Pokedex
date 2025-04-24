@@ -68,7 +68,7 @@ export default function Pokedex() {
             className={`pokemon-card ${pokemon.types[0]?.type?.name || "unknown"}`}
             state={{ page }} // Pass the current page state
           >
-            <span className="pokemon-id">#{pokemon.id}</span>
+            <span className="pokemon-id">#{(page - 1) * limit + index + 1}</span>
             <h2 className="pokemon-name">{pokemon.name}</h2>
             {pokemon.sprites?.other?.["official-artwork"]?.front_default && (
               <img
@@ -80,9 +80,9 @@ export default function Pokedex() {
           </Link>
         ))}
       </div>
-      <div className="pagination">
-        <Pagination page={page} setPage={setPage} />
-      </div>
+<div className="pagination">
+  <Pagination page={page} setPage={setPage} hasMore={pokemonList.length === limit} />
+</div>
     </div>
   );
 }

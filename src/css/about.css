@@ -39,4 +39,29 @@
     color: #bbb;
     text-align: center;
   }
+
+  .footer {
+    margin-top: 20px;
+    text-align: center;
+  }
+  
+  .github-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 1.2rem;
+    font-weight: bold;
+  }
+  
+  .github-link:hover {
+    color: #0366d6; /* GitHub blue */
+  }
+  
+  .github-logo {
+    width: 24px;
+    height: 24px;
+    margin-right: 8px;
+  }
   
