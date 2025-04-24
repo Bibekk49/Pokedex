@@ -34,15 +34,11 @@ export default function PokemonDetail() {
       <h1 className="pokemon-name">{pokemon.name}</h1>
       <div className="pokemon-images">
         <img
-          src={pokemon.sprites.front_default}
+          src={pokemon.sprites.other['official-artwork'].front_default}
           alt={`${pokemon.name} front`}
           className="pokemon-sprite"
         />
-        <img
-          src={pokemon.sprites.back_default}
-          alt={`${pokemon.name} back`}
-          className="pokemon-sprite"
-        />
+        
       </div>
       <div className="pokemon-info">
         <p>
