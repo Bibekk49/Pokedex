@@ -111,3 +111,25 @@
   color: #ffffff;
   margin-top: 2rem;
 }
+
+.back-button {
+  display: inline-block;
+  padding: 5px 10px;
+  font-size: 1rem; /* Slightly larger font size */
+  background-color: #00bcd4;/* Match the pagination button color */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  text-align: center;
+  cursor: pointer;
+  margin-top: 20px; /* Add space between button and other elements */
+  margin-left: auto;
+  margin-right: auto;
+  display: block; /* Center the button */
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.back-button:hover {
+  background-color: #00bcd4; /* Darker shade on hover */
+  transform: scale(1.05); /* Slight zoom effect on hover */
+}

@@ -5,6 +5,15 @@
     gap: 1rem;
     margin-top: 2rem;
   }
+  .pagination {
+    position: fixed;
+    bottom: 15%;
+    left: 0;
+    width: 100%; 
+    padding: 1rem 0;
+    text-align: center; 
+    z-index: 100;
+  }
   
   .pagination-container button {
     padding: 0.5rem 1rem;

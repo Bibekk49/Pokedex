@@ -41,8 +41,7 @@
   }
 
   .pokemon-image {
-    image-rendering: pixelated;
-    width: 100px;  /* Or a size that fits your design */
+    width: 100px; 
     height: 100px;
   }
   

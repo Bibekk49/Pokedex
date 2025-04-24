@@ -1,15 +1,24 @@
-import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
-import Pagination from './Pagination';
-import '../css/base.css';
-import '../css/grid.css';
-import '../css/cards.css';
-import '../css/pagination.css';
+import React, { useState, useEffect } from "react";
+import { Link, useLocation } from "react-router-dom";
+import Pagination from "./Pagination";
+import "../css/base.css";
+import "../css/grid.css";
+import "../css/cards.css";
+import "../css/pagination.css";
 
 export default function Pokedex() {
   const [pokemonList, setPokemonList] = useState([]);
   const [page, setPage] = useState(1);
   const limit = 12;
+
+  const location = useLocation();
+
+  // Retrieve the previous page state from React Router state
+  useEffect(() => {
+    if (location.state?.page) {
+      setPage(location.state.page);
+    }
+  }, [location]);
 
   useEffect(() => {
     const offset = (page - 1) * limit;
@@ -36,9 +45,9 @@ export default function Pokedex() {
             <span className="pokemon-id">.{pokemon.id}</span>
 
             <h2 className="pokemon-name">{pokemon.name}</h2>
-            {pokemon.sprites?.other?.['official-artwork']?.front_default && (
+            {pokemon.sprites?.other?.["official-artwork"]?.front_default && (
               <img
-                src={pokemon.sprites.other['official-artwork'].front_default}
+                src={pokemon.sprites.other["official-artwork"].front_default}
                 alt={`${pokemon.name} artwork`}
                 className="pokemon-image"
               />
@@ -46,7 +55,9 @@ export default function Pokedex() {
           </Link>
         ))}
       </div>
-      <Pagination page={page} setPage={setPage} />
+      <div className="pagination">
+        <Pagination page={page} setPage={setPage} />
+      </div>
     </div>
   );
 }

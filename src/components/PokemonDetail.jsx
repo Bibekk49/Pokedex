@@ -1,11 +1,13 @@
 import React, { useState, useEffect } from 'react';
-import { useParams } from 'react-router-dom';
+import { useParams, useLocation, useNavigate } from 'react-router-dom';
 import '../css/detail.css';
 
 export default function PokemonDetail() {
   const { id } = useParams();
   const [pokemon, setPokemon] = useState(null);
   const [error, setError] = useState(null);
+  const navigate = useNavigate();
+  const location = useLocation();
 
   useEffect(() => {
     setError(null);
@@ -38,7 +40,6 @@ export default function PokemonDetail() {
           alt={`${pokemon.name} front`}
           className="pokemon-sprite"
         />
-        
       </div>
       <div className="pokemon-info">
         <p>
@@ -85,6 +86,14 @@ export default function PokemonDetail() {
           })}
         </ul>
       </div>
+      <button
+        onClick={() =>
+          navigate('/', { state: { page: location.state?.page || 1 } })
+        }
+        className="back-button"
+      >
+        Back to Pokedex
+      </button>
     </div>
   );
 }
