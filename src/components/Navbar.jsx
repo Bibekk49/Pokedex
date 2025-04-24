@@ -1,16 +1,15 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import './../assets/styles.css'; // Ensure global styles are linked
+import { Link, useLocation } from 'react-router-dom';
 
 export default function Navbar() {
+  const location = useLocation();
+
   return (
     <nav className="navbar">
-      <Link to="/" className="nav-link">
-        Pokédex
-      </Link>
-      <Link to="/about" className="nav-link">
-        About
-      </Link>
+      <div className="nav-content">
+        <Link to="/" className={`nav-link ${location.pathname === '/' ? 'active' : ''}`}>Pokédex</Link>
+        <Link to="/about" className={`nav-link ${location.pathname === '/about' ? 'active' : ''}`}>About</Link>
+      </div>
     </nav>
   );
 }

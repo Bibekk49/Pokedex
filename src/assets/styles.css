@@ -38,27 +38,26 @@ body {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 1rem; /* reduced from 1.5rem */
-  padding: 0 2rem 2rem;
+  padding: 0 10rem 1rem;
   justify-content: space-evenly; /* keeps spacing balanced */
   align-items: center;
 }
 
   
-  /* Card */
-  .pokemon-card {
-    width: 180px;
-    padding: 1.5rem 1rem;
-    border-radius: 15px;
-    color: white;
+.pokemon-card {
+    padding: 1.5rem;
+    border-radius: 16px;
     text-align: center;
     font-weight: bold;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    color: white;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
     transition: transform 0.3s ease;
   }
   
   .pokemon-card:hover {
     transform: scale(1.05);
   }
+  
   
   /* Type Color Themes */
   .grass { background-color: #78c850; }
@@ -124,5 +123,80 @@ body {
   .pokemon-detail img {
     height: 120px;
     margin: 0.5rem;
+  }
+  
+  /*pagination*/
+  .pagination-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 2rem;
+  }
+  
+  .pagination-container button {
+    padding: 0.5rem 1rem;
+    font-weight: bold;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    background-color: #eee;
+  }
+  
+  .pagination-container button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+  
+  .page-number {
+    color: white;
+    font-size: 1.1rem;
+  }
+  
+  /*Navigation*/
+  .navbar {
+    width: 100%;
+    padding: 1rem 0;
+    background: linear-gradient(90deg, #0f2027, #203a43, #2c5364); /* Futuristic gradient */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+  
+  .nav-content {
+    max-width: 900px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+  }
+  
+  .nav-link {
+    font-size: 1.3rem;
+    font-weight: bold;
+    text-decoration: none;
+    color: #58f0f5;
+    transition: all 0.3s ease-in-out;
+    position: relative;
+  }
+  
+  .nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -4px;
+    left: 0;
+    background-color: #58f0f5;
+    transition: width 0.3s;
+  }
+  
+  .nav-link:hover::after {
+    width: 100%;
+  }
+  
+  .nav-link.active {
+    color: #ffffff;
   }
   
