@@ -1,5 +1,5 @@
 .pokemon-detail {
-  position: fixed; 
+  position: absolute; /* Position relative to the container */
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -16,6 +16,22 @@
   text-align: center;
   z-index: 1000;
   overflow: hidden;
+}
+
+.pokemon-detail-container {
+  position: relative; /* Ensure it stays within the parent container */
+  width: 100%;
+  height: 100%;
+}
+
+.popup-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 999;
 }
 
 body {

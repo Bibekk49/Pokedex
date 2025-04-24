@@ -33,7 +33,9 @@ export default function PokemonDetail() {
 
   return (
     <>
+      {/* Background overlay */}
       <div className="popup-overlay" />
+      {/* Popup card */}
       <div className="pokemon-detail">
         <h1 className="pokemon-name">{pokemon.name}</h1>
         <div className="pokemon-images">
