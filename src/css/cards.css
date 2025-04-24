@@ -23,15 +23,75 @@
   .grass { background-color: #78c850; }
   .fire { background-color: #f08030; }
   .water { background-color: #6890f0; }
-  bug { background-color: #a8b820; }
-  normal { background-color: #a8a878; }
-  poison { background-color: #a040a0; }
-  electric { background-color: #f8d030; }
-  ground { background-color: #e0c068; }
-  fairy { background-color: #ee99ac; }
-  fighting { background-color: #c03028; }
-  psychic { background-color: #f85888; }
-  rock { background-color: #b8a038; }
-  ghost { background-color: #705898; }
-  ice { background-color: #98d8d8; }
-  dragon { background-color: #7038f8; }
+  .bug { background-color: #a8b820; }
+  .normal { background-color: #a8a878; }
+  .poison { background-color: #a040a0; }
+  .electric { background-color: #f8d030; }
+  .ground { background-color: #e0c068; }
+  .fairy { background-color: #ee99ac; }
+  .fighting { background-color: #c03028; }
+  .psychic { background-color: #f85888; }
+  .rock { background-color: #b8a038; }
+  .ghost { background-color: #705898; }
+  .ice { background-color: #98d8d8; }
+  .dragon { background-color: #7038f8; }
+
+/* Fire type */
+.pokemon-card.fire:nth-child(odd) { background-color: #f08030; }     /* original */
+.pokemon-card.fire:nth-child(even) { background-color: #ff944d; }    /* lighter */
+
+/* Water type */
+.pokemon-card.water:nth-child(odd) { background-color: #6890f0; }
+.pokemon-card.water:nth-child(even) { background-color: #8fb0f8; }
+
+/* Grass type */
+.pokemon-card.grass:nth-child(odd) { background-color: #78c850; }
+.pokemon-card.grass:nth-child(even) { background-color: #94d86a; }
+
+/* Electric */
+.pokemon-card.electric:nth-child(odd) { background-color: #f8d030; }
+.pokemon-card.electric:nth-child(even) { background-color: #ffdf60; }
+
+/* Bug */
+.pokemon-card.bug:nth-child(odd) { background-color: #a8b820; }
+.pokemon-card.bug:nth-child(even) { background-color: #c4d944; }
+
+/* Poison */
+.pokemon-card.poison:nth-child(odd) { background-color: #a040a0; }
+.pokemon-card.poison:nth-child(even) { background-color: #c060c0; }
+
+/* Ground */
+.pokemon-card.ground:nth-child(odd) { background-color: #e0c068; }
+.pokemon-card.ground:nth-child(even) { background-color: #f0d080; }
+
+/* Rock */
+.pokemon-card.rock:nth-child(odd) { background-color: #b8a038; }
+.pokemon-card.rock:nth-child(even) { background-color: #d8b858; }
+
+/* Ghost */
+.pokemon-card.ghost:nth-child(odd) { background-color: #705898; }
+.pokemon-card.ghost:nth-child(even) { background-color: #8a70b8; }
+
+/* Psychic */
+.pokemon-card.psychic:nth-child(odd) { background-color: #f85888; }
+.pokemon-card.psychic:nth-child(even) { background-color: #ff80aa; }
+
+/* Ice */
+.pokemon-card.ice:nth-child(odd) { background-color: #98d8d8; }
+.pokemon-card.ice:nth-child(even) { background-color: #b8f0f0; }
+
+/* Dragon */
+.pokemon-card.dragon:nth-child(odd) { background-color: #7038f8; }
+.pokemon-card.dragon:nth-child(even) { background-color: #8a60ff; }
+
+/* Fairy */
+.pokemon-card.fairy:nth-child(odd) { background-color: #ee99ac; }
+.pokemon-card.fairy:nth-child(even) { background-color: #fbb3c3; }
+
+/* Fighting */
+.pokemon-card.fighting:nth-child(odd) { background-color: #c03028; }
+.pokemon-card.fighting:nth-child(even) { background-color: #e05040; }
+
+/* Normal */
+.pokemon-card.normal:nth-child(odd) { background-color: #a8a878; }
+.pokemon-card.normal:nth-child(even) { background-color: #c8c898; }
